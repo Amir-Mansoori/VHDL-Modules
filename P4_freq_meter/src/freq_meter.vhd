@@ -34,14 +34,14 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity freq_meter_0 is
+entity freq_meter is
     Port ( clk : in STD_LOGIC;
            freq : in STD_LOGIC;
            en : out STD_LOGIC;
            count : out STD_LOGIC_VECTOR (15 downto 0));
-end freq_meter_0;
+end freq_meter;
 
-architecture Behavioral of freq_meter_0 is
+architecture Behavioral of freq_meter is
 signal cnt_1s: integer range 0 to 100000000:=0;
 signal tmp: STD_LOGIC_VECTOR(15 downto 0):=x"0000";
 signal flag_1s: STD_LOGIC:='0';
